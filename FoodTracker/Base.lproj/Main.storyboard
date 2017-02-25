@@ -46,6 +46,7 @@
                                     <outlet property="nameLabel" destination="BkT-NB-kjg" id="jDP-oy-iC4"/>
                                     <outlet property="photoImageView" destination="Bb1-nG-VHC" id="zJU-94-iiC"/>
                                     <outlet property="ratingControl" destination="uma-Kb-9QG" id="2VA-Wa-htC"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="1tt-Fj-OqC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -79,24 +80,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wpc-aa-lIW">
-                                <rect key="frame" x="16" y="78" width="343" height="445"/>
+                                <rect key="frame" x="16" y="78" width="321" height="416"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a new meal..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3I-Mu-YFz">
-                                        <rect key="frame" x="0.0" y="-1" width="343" height="30"/>
+                                        <rect key="frame" x="88.5" y="0.0" width="143.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Bbg-X0-V6j">
-                                        <rect key="frame" x="12" y="67" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="38" width="320.5" height="320"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="mmk-9B-p0x" appends="YES" id="0jE-uk-Usu"/>
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nmm-95-dpQ" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="46" y="395" width="252" height="50"/>
+                                        <rect key="frame" x="34" y="366" width="252.5" height="50"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="size" keyPath="starSize">
                                                 <size key="value" width="44" height="44"/>
@@ -145,7 +146,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8zk-wI-jsc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZAz-Mg-OAu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ZAz-Mg-OAu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -163,7 +164,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FsX-Sd-1Lx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LT6-Sb-7ni">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LT6-Sb-7ni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -174,10 +175,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cuo-tJ-d1r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+            <point key="canvasLocation" x="1020" y="390"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="569" height="380"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1tt-Fj-OqC"/>
+    </inferredMetricsTieBreakers>
 </document>
